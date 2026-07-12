@@ -2054,5 +2054,2004 @@
   <p>The Sanskrit term <em class="term">śabda</em> possesses multiple dimensions. It may refer simply to sound, but within philosophical and grammatical traditions it may also refer to meaningful linguistic expression, and in some traditions to a metaphysical principle underlying both. The Sanskrit linguistic tradition therefore frequently asks a deeper question beneath its technical apparatus: how does physical sound become meaningful knowledge? This question becomes central to the four bodies of thought examined in the sections that follow — Pāṇinian grammar, which answers it procedurally; Bhartṛhari's philosophy of language, which answers it metaphysically; dhvani theory, which answers it aesthetically; and the mantra traditions, which answer it ritually and soteriologically. Each of the four sections below is offered as a self-contained, in-depth treatment of its subject, while remaining answerable to the single question that unites them.</p>
 
   <div class="part-divider"><span class="glyph">◆ ◆ ◆</span></div>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Maheshvara Sutras and the Phonological Architecture of Panini's Grammar</title>
+<style>
+:root {
+  color-scheme: light only;
+  --bg-primary: #12100d;
+  --bg-secondary: #1c1812;
+  --bg-panel: #221c15;
+  --bg-table-alt: #241e17;
+  --gold: #c9a24b;
+  --gold-bright: #e6c874;
+  --crimson: #9a3a3a;
+  --crimson-bright: #c25050;
+  --ink: #e8dfc8;
+  --ink-dim: #b9ac8c;
+  --ink-faint: #8c7f63;
+  --rule: #3a3020;
+  --devanagari: #e0c98f;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light only; }
+body {
+  background-color: var(--bg-primary);
+  background-image:
+    radial-gradient(ellipse at top left, #201a12 0%, transparent 55%),
+    radial-gradient(ellipse at bottom right, #191510 0%, transparent 55%);
+  color: var(--ink);
+  font-family: 'Spectral', 'Georgia', serif;
+  line-height: 1.75;
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem 8rem 2.5rem;
+}
+h1, h2, h3, h4 {
+  font-family: 'Cinzel', 'Trajan Pro', serif;
+  color: var(--gold-bright);
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+h1 {
+  font-size: 2.4rem;
+  text-align: center;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2rem;
+}
+.subtitle {
+  text-align: center;
+  color: var(--ink-dim);
+  font-style: italic;
+  font-size: 1.05rem;
+  margin-bottom: 3rem;
+  font-family: 'Spectral', serif;
+}
+h2 {
+  font-size: 1.55rem;
+  margin-top: 4rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.6rem;
+}
+h2 .num {
+  color: var(--crimson-bright);
+  margin-right: 0.6rem;
+}
+h3 {
+  font-size: 1.2rem;
+  color: var(--gold);
+  margin-top: 2.4rem;
+  margin-bottom: 0.8rem;
+}
+h4 {
+  font-size: 1.02rem;
+  color: var(--ink);
+  font-family: 'Spectral', serif;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin: 0 0 1.15rem 0;
+  color: var(--ink);
+  font-size: 1.04rem;
+  text-align: justify;
+  hyphens: auto;
+}
+.skt {
+  font-family: 'Noto Sans Devanagari', 'Spectral', serif;
+  color: var(--devanagari);
+  font-style: normal;
+}
+em.term {
+  font-style: italic;
+  color: var(--gold);
+}
+strong {
+  color: var(--gold-bright);
+  font-weight: 600;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.6rem 0 2rem 0;
+  font-size: 0.96rem;
+  background-color: var(--bg-panel);
+  border: 1px solid var(--rule);
+}
+caption {
+  caption-side: top;
+  text-align: left;
+  color: var(--ink-dim);
+  font-style: italic;
+  padding-bottom: 0.5rem;
+  font-size: 0.92rem;
+}
+th {
+  background-color: #2a2216;
+  color: var(--gold-bright);
+  font-family: 'Cinzel', serif;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+  border-bottom: 2px solid var(--gold);
+  font-size: 0.88rem;
+  letter-spacing: 0.03em;
+}
+td {
+  padding: 0.6rem 0.85rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  vertical-align: top;
+}
+tr:nth-child(even) td {
+  background-color: var(--bg-table-alt);
+}
+.note {
+  background-color: var(--bg-panel);
+  border-left: 3px solid var(--crimson-bright);
+  padding: 1.1rem 1.4rem;
+  margin: 1.6rem 0;
+  border-radius: 2px;
+}
+.note-title {
+  font-family: 'Cinzel', serif;
+  color: var(--crimson-bright);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.sutra-block {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  padding: 1.2rem 1.5rem;
+  margin: 1.4rem 0;
+  border-radius: 2px;
+}
+.sutra-num {
+  color: var(--crimson-bright);
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+.sutra-text {
+  font-size: 1.35rem;
+  color: var(--devanagari);
+  margin: 0.4rem 0 0.6rem 0;
+}
+ul, ol {
+  color: var(--ink);
+  font-size: 1.02rem;
+  margin: 0 0 1.2rem 0;
+  padding-left: 1.6rem;
+}
+li {
+  margin-bottom: 0.5rem;
+}
+hr.sec-divider {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 3rem 0;
+}
+.toc {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--rule);
+  padding: 1.6rem 2rem;
+  margin-bottom: 3rem;
+  border-radius: 3px;
+}
+.toc-title {
+  font-family: 'Cinzel', serif;
+  color: var(--gold-bright);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.toc ol {
+  columns: 2;
+  column-gap: 2.5rem;
+  padding-left: 1.4rem;
+}
+.toc li {
+  font-size: 0.94rem;
+  margin-bottom: 0.5rem;
+  break-inside: avoid;
+}
+.toc a {
+  color: var(--ink-dim);
+  text-decoration: none;
+}
+.toc a:hover {
+  color: var(--gold-bright);
+}
+.pron-table td.ipa {
+  color: var(--gold);
+  font-family: monospace;
+}
+footer {
+  text-align: center;
+  color: var(--ink-faint);
+  font-size: 0.85rem;
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--rule);
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>The Maheshvara Sutras and the Phonological<br>Architecture of Panini's Grammar</h1>
+<p class="subtitle">An analytical study of the fourteen phonological sutras, the pratyahara system of linguistic compression, the varna concept, and the articulatory organization of the Sanskrit sound system</p>
+
+<div class="toc">
+<div class="toc-title">Contents</div>
+<ol>
+<li><a href="#s1">The Historical and Textual Position of the Maheshvara Sutras</a></li>
+<li><a href="#s2">The Traditional Account of Origin</a></li>
+<li><a href="#s3">The Fourteen Sutras: Enumeration and Structure</a></li>
+<li><a href="#s4">Sutra One: a i u n</a></li>
+<li><a href="#s5">Sutra Two: r l k</a></li>
+<li><a href="#s6">Sutra Three: e o ng</a></li>
+<li><a href="#s7">Sutra Four: ai au c</a></li>
+<li><a href="#s8">Sutra Five: ha ya va ra t</a></li>
+<li><a href="#s9">Sutra Six: la n</a></li>
+<li><a href="#s10">Sutra Seven: nya ma nga na na m</a></li>
+<li><a href="#s11">Sutra Eight: jha bha n</a></li>
+<li><a href="#s12">Sutra Nine: gha dha dha s</a></li>
+<li><a href="#s13">Sutra Ten: ja ba ga da da s</a></li>
+<li><a href="#s14">Sutra Eleven: kha pha cha tha tha ca ta ta v</a></li>
+<li><a href="#s15">Sutra Twelve: ka pa y</a></li>
+<li><a href="#s16">Sutra Thirteen: sha sha sa r</a></li>
+<li><a href="#s17">Sutra Fourteen: ha l</a></li>
+<li><a href="#s18">The Logic of the Arrangement</a></li>
+<li><a href="#s19">Pratyahara: The Rule of Formation</a></li>
+<li><a href="#s20">The Major Pratyaharas and Their Grammatical Function</a></li>
+<li><a href="#s21">Pratyaharas in Operation: Worked Examples from the Ashtadhyayi</a></li>
+<li><a href="#s22">Varna: The Ordered Unit of Sound</a></li>
+<li><a href="#s23">Varna and the Modern Phoneme: A Comparative Analysis</a></li>
+<li><a href="#s24">The Organization of the Sanskrit Alphabet</a></li>
+<li><a href="#s25">The Fivefold Consonant System</a></li>
+<li><a href="#s26">Sthana: Place of Articulation</a></li>
+<li><a href="#s27">Prayatna: Internal and External Effort</a></li>
+<li><a href="#s28">Ghosha and Aghosha: The Voicing Parameter</a></li>
+<li><a href="#s29">Alpaprana and Mahaprana: The Aspiration Parameter</a></li>
+<li><a href="#s30">Anunasika and the Nasal Class</a></li>
+<li><a href="#s31">The Semivowels and the Sibilants</a></li>
+<li><a href="#s32">Computational and Formal Significance of the System</a></li>
+<li><a href="#s33">Comparative Notes: Panini and Other Grammatical Traditions</a></li>
+<li><a href="#s34">Legacy and Later Reception</a></li>
+<li><a href="#s35">Concluding Synthesis</a></li>
+</ol>
+</div>
+
+
+<h2 id="s1"><span class="num">01</span>The Historical and Textual Position of the Maheshvara Sutras</h2>
+<p>
+The Maheshvara Sutras stand at the very threshold of Panini's
+Ashtadhyayi, preceding even the first formal rule of grammar. They
+are conventionally treated as an appendix or preface to the
+grammatical text proper, yet their placement at the opening of the
+work is not incidental. Every subsequent rule in the Ashtadhyayi
+depends, directly or indirectly, on the sound-groupings these
+fourteen sequences establish. Without them, the entire apparatus
+of abbreviation that makes Panini's grammar so remarkably compact
+would collapse into unworkable verbosity.
+</p>
+<p>
+The fourteen sequences are known by several names in the
+tradition. They are called the <em class="term">Shiva Sutras</em>
+in reference to the traditional account of their revelation, the
+<em class="term">Akshara Samamnaya</em> or "enumeration of sounds"
+in reference to their descriptive function, and the <em
+class="term">Pratyahara Sutras</em> in reference to their
+operative purpose, which is to enable the formation of
+pratyaharas, or compressed technical designations for sound
+classes. Each of these names captures a different facet of the
+same fourteen-line object: a theological account of origin, a
+phonetic inventory, and a formal technical device.
+</p>
+<p>
+It is important to state at the outset what these fourteen
+sequences are not. They are not a devanagari alphabet chart in the
+sense familiar from a modern primer, where sounds are listed for
+pedagogical recitation and memorization of pronunciation alone.
+Nor are they a poetic or liturgical composition possessing
+independent literary value. They are a piece of engineering: a
+minimal, non-redundant arrangement of sound segments and terminal
+markers constructed so that any grammatically relevant class of
+sounds used repeatedly throughout the Ashtadhyayi can be named
+with a two- or three-syllable tag rather than spelled out in full
+each time. The entire grammar that follows presupposes fluency
+with this system.
+</p>
+<p>
+The scholarly literature on Panini situates the Ashtadhyayi at a
+mature stage of a much older tradition of phonetic analysis, one
+already visible in the pratishakhya literature attached to the
+various Vedic recensions and in the Shiksha treatises devoted to
+correct recitation. Panini did not invent the observation that
+Sanskrit sounds could be classified by place and manner of
+production; that observational base long predates him. What Panini
+contributed, in the specific instrument of the Maheshvara Sutras,
+was the reduction of that observational base to a formal notation
+capable of supporting an entire generative grammar of a classical
+language, a feat with no true precedent and few subsequent
+parallels in the world's grammatical traditions before the
+twentieth century.
+</p>
+
+<h2 id="s2"><span class="num">02</span>The Traditional Account of Origin</h2>
+<p>
+Within the grammatical tradition itself, the fourteen sutras are
+associated with a well-known narrative in which the sounds were
+revealed through the beat of a drum, the damaru, played by Shiva
+at the conclusion of his dance, the tandava. Fourteen strikes of
+the drum are said to correspond to the fourteen sutras, and the
+name Maheshvara Sutras, "the sutras of the great lord," together
+with the alternate name Shiva Sutras, preserves this account
+within the terminology still used by grammarians today.
+</p>
+<div class="note">
+<div class="note-title">On the Status of the Traditional Account</div>
+<p style="margin:0;">This narrative belongs to the received tradition surrounding Panini's grammar and is transmitted by later commentators, most notably in the introductory verses of works such as the Vyakarana Mahabhashya tradition and later commentarial preambles. It functions within the tradition as an account of sanctity and authority attached to the phonetic base of the grammar. Whatever its historical status, the narrative should be understood as distinct from the internal linguistic logic of the sutras themselves, which is fully explicable on independent formal and articulatory grounds without reference to the narrative of origin. The two levels of explanation, the traditional and the formal-linguistic, are not in competition; they answer different questions.</p>
+</div>
+<p>
+What can be said with confidence on textual grounds is that the
+fourteen sutras appear as a fixed, unvarying unit at the head of
+the grammatical tradition stemming from Panini, that they are
+treated by every major commentator, including Katyayana in the
+Varttikas and Patanjali in the Mahabhashya, as antecedent to and
+presupposed by the first formal rule of the Ashtadhyayi, and that
+their wording has remained remarkably stable across the manuscript
+tradition, a stability that itself testifies to the precision with
+which they were originally fixed. A grammar of this constructive
+complexity could not function if its foundational phonetic
+inventory were subject to significant variant readings, and indeed
+it is not.
+</p>
+
+<h2 id="s3"><span class="num">03</span>The Fourteen Sutras: Enumeration and Structure</h2>
+<p>
+Each of the fourteen sutras consists of a short sequence of sound
+segments followed by a single closing consonant that does not
+itself function as a pronounceable member of the sequence in
+ordinary usage. This closing segment is called an <em
+class="term">it</em>, a technical marker, and its sole grammatical
+purpose is to serve as the terminal reference point used in
+forming a pratyahara, the compressed designation discussed in
+detail in a later section of this study. The it markers are not
+part of the phonetic content being classified; they are indices,
+comparable in function to a closing bracket in a formal notation.
+</p>
+<p>
+The fourteen sutras, in their traditional sequence, together
+enumerate the entire inventory of Sanskrit sounds relevant to
+grammatical description: the simple and complex vowels, the
+diphthongs, the semivowels, the nasal consonants, the five classes
+of stop consonants organized by voicing and aspiration, and the
+sibilants and the aspirate h. No sound used in classical Sanskrit
+grammatical description falls outside this enumeration, and the
+order in which the sounds appear is neither alphabetical in the
+modern sense nor arbitrary, but rather organized by a set of
+articulatory and functional principles that are examined in detail
+in the section on the logic of the arrangement below.
+</p>
+<p>
+The table that follows presents the fourteen sutras in sequence
+together with their it markers and a preliminary indication of the
+sound class each contains. Each sutra receives its own dedicated
+section immediately afterward, in which the phonetic content, the
+articulatory character of the sounds involved, and the grammatical
+role the sutra plays within the Ashtadhyayi are treated in depth.
+</p>
+<table>
+<caption>The Fourteen Maheshvara Sutras in Sequence</caption>
+<tr><th>No.</th><th>Sutra (sounds + it marker)</th><th>Sound Class Enumerated</th></tr>
+<tr><td>1</td><td class="skt">a i u &#7751;</td><td>Simple vowels, short and long grades</td></tr>
+<tr><td>2</td><td class="skt">&#7771; &#7735; k</td><td>Syllabic liquid vowels</td></tr>
+<tr><td>3</td><td class="skt">e o &#7749;</td><td>Guna-grade complex vowels</td></tr>
+<tr><td>4</td><td class="skt">ai au c</td><td>Vriddhi-grade diphthongs</td></tr>
+<tr><td>5</td><td class="skt">ha ya va ra &#7789;</td><td>Semivowels and the aspirate</td></tr>
+<tr><td>6</td><td class="skt">la &#7751;</td><td>The lateral liquid</td></tr>
+<tr><td>7</td><td class="skt">&#241;a ma &#331;a &#7751;a na m</td><td>The five nasal consonants</td></tr>
+<tr><td>8</td><td class="skt">jha bha &#241;</td><td>Voiced aspirated stops, series one</td></tr>
+<tr><td>9</td><td class="skt">gha &#7813;ha dha &#7779;</td><td>Voiced aspirated stops, series two</td></tr>
+<tr><td>10</td><td class="skt">ja ba ga &#7693;a da &#347;</td><td>Voiced unaspirated stops</td></tr>
+<tr><td>11</td><td class="skt">kha pha cha &#7789;ha tha ca &#7789;a ta v</td><td>Voiceless aspirated and unaspirated stops</td></tr>
+<tr><td>12</td><td class="skt">ka pa y</td><td>Voiceless velar and labial stops</td></tr>
+<tr><td>13</td><td class="skt">&#347;a &#7779;a sa r</td><td>The three sibilants</td></tr>
+<tr><td>14</td><td class="skt">ha l</td><td>The aspirate, closing the system</td></tr>
+</table>
+<p>
+A reader encountering this table for the first time is likely to
+notice immediately that it does not resemble the familiar
+pedagogical ordering of the Sanskrit alphabet, in which vowels are
+given in one continuous block followed by the five stop classes
+each given in full internal order from unvoiced unaspirated
+through nasal. The Maheshvara Sutras deliberately depart from that
+pedagogical ordering because their purpose is not recitation but
+formal compression. Sounds that behave alike for the purposes of
+grammatical rule-writing are grouped together even when doing so
+requires breaking up what would otherwise be a natural
+articulatory class, and the internal logic governing these choices
+is the subject of the sections that follow.
+</p>
+
+<h2 id="s4"><span class="num">04</span>Sutra One: a i u &#7751;</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 1</div>
+<div class="sutra-text">a i u &#7751;</div>
+</div>
+<p>
+The first sutra opens the entire phonological enumeration with the
+three short simple vowels a, i, and u, closed by the it marker
+&#7751;. In the traditional recitation these three vowels are
+understood to stand for their long counterparts as well, since
+Panini's system treats vowel length as a secondary parameter,
+"matra," applied to a base vowel quality rather than as defining
+an entirely separate segment. The short a, i, and u therefore
+implicitly carry a, i, u, and their long forms a-long, i-long,
+u-long within the grammatical treatment that follows, even though
+only the short forms are written in the sutra itself.
+</p>
+<p>
+Phonetically, these three vowels represent the three cardinal
+points of the vowel space realizable in Sanskrit: a is the
+maximally open, central vowel; i is the high front vowel; u is the
+high back rounded vowel. This is not a coincidence of Panini's
+ordering but a reflection of the fact that these three vowel
+qualities function as the base grades from which the more complex
+guna and vriddhi grade vowels of sutras three and four are derived
+through the process of internal vowel gradation known as guna and
+vriddhi, one of the most pervasive operations in Sanskrit
+morphology, governing everything from root-formation to the
+derivation of causatives and desideratives.
+</p>
+<p>
+The grammatical significance of grouping exactly these three
+vowels together, rather than including the guna and vriddhi grades
+in the same sutra, becomes apparent only once the pratyahara
+system is understood. Because a, i, and u form their own sutra,
+distinct from the sutra containing e and o, a pratyahara built
+from this sutra alone, namely ik when combined with the following
+sutra's terminal k, can designate precisely the four short high
+and central vowels used as the input to the gradation rules,
+without inadvertently including the already-derived guna and
+vriddhi vowels. This separation is a deliberate act of grammatical
+foresight built directly into the phonetic inventory.
+</p>
+
+<h2 id="s5"><span class="num">05</span>Sutra Two: &#7771; &#7735; k</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 2</div>
+<div class="sutra-text">&#7771; &#7735; k</div>
+</div>
+<p>
+The second sutra contains the two syllabic liquid vowels of
+Sanskrit, &#7771; and &#7735;, closed by the it marker k. These
+are sounds without a true equivalent in most of the world's
+languages: consonantal liquids, the r-sound and the l-sound,
+functioning as the syllabic nucleus of a syllable in place of a
+vowel, in the same manner that the short vowels of the first sutra
+function. English speakers sometimes approximate the sound of
+&#7771; in the second syllable of the word "butter" as pronounced
+in certain American dialects, where the r takes on syllabic
+function, though the Sanskrit sound is articulated with a more
+clearly defined retroflex quality.
+</p>
+<p>
+Like the vowels of the first sutra, &#7771; and &#7735;
+participate fully in the system of vowel gradation, each
+possessing its own guna and vriddhi grade forms, ar and al for the
+guna grade and ar-long and al-long for the vriddhi grade
+respectively. Their inclusion in a separate sutra from the first,
+rather than simply being appended to a i u, again reflects the
+requirement of precise pratyahara formation: the combination of
+the first two sutras, terminating at the it marker k of the second
+sutra, yields the pratyahara ik, which designates exactly the set
+of vowels eligible to undergo guna and vriddhi substitution, a set
+that recurs constantly throughout the rules of the Ashtadhyayi
+governing root and suffix combination.
+</p>
+<p>
+The presence of these syllabic liquids at the head of the phonetic
+inventory, immediately following the three simple vowels, also
+reflects an articulatory continuum recognized by the ancient
+phoneticians: the syllabic liquids share with vowels the property
+of forming the nucleus of a syllable while sharing with the
+consonantal liquids ra and la, enumerated far later in the fifth
+and sixth sutras, their place and manner of articulatory closure.
+Their placement here, rather than among the later consonants, is
+thus a considered classification decision rather than an arbitrary
+one.
+</p>
+
+<h2 id="s6"><span class="num">06</span>Sutra Three: e o &#7749;</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 3</div>
+<div class="sutra-text">e o &#7749;</div>
+</div>
+<p>
+The third sutra introduces the two guna-grade vowels e and o,
+closed by the it marker &#7749;. These vowels are historically and
+synchronically understood within the Paninian system as the
+guna-grade realizations of i and u respectively, formed through
+the combination of the base vowel a with i or u, a process visible
+synchronically in numerous Sanskrit derivational patterns. The
+vowel e functions as the guna grade of i, and o functions as the
+guna grade of u, a relationship that is central to understanding a
+very large portion of Sanskrit's internal vowel alternations
+across verbal conjugation and nominal declension.
+</p>
+<p>
+Because e and o occupy their own sutra rather than being folded
+into the sutra containing i and u, the pratyahara system can
+distinguish cleanly between the base grade vowels and their
+guna-grade derivatives. This is essential because many of Panini's
+rules specify operations that apply only to base-grade vowels,
+producing guna as an output, and it would be circular and formally
+incoherent for the input specification to already include the
+output forms. The separation of sutras one, two, and three
+therefore encodes, directly within the phonetic inventory, a
+derivational hierarchy that will govern morphological rules stated
+many hundreds of sutras later in the text.
+</p>
+<p>
+Combined with the terminal reach of sutra four, the pratyahara
+e&#331; can be formed to designate the guna and vriddhi grade
+vowels collectively when needed, while the narrower pratyahara
+restricted to sutra three alone designates only the guna grade.
+This is a clear demonstration of how the fine-grained division of
+the fourteen sutras into short, individually terminated units
+multiplies the number of precisely targetable sound classes
+available to the grammarian, a multiplication that would be
+impossible if the vowels had simply been listed in one undivided
+block.
+</p>
+
+<h2 id="s7"><span class="num">07</span>Sutra Four: ai au c</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 4</div>
+<div class="sutra-text">ai au c</div>
+</div>
+<p>
+The fourth sutra completes the vowel portion of the inventory with
+the two vriddhi-grade diphthongs ai and au, closed by the it
+marker c. These represent the further-strengthened grade of the i
+and u vowels, standing in the same derivational relationship to e
+and o that e and o stand in to i and u. The three-tier system of
+base grade, guna grade, and vriddhi grade, spanning sutras one
+through four, constitutes one of the most productive morphological
+mechanisms in the Sanskrit language, governing the internal vowel
+of verbal roots across different tense and mood formations, the
+distinction between primary and secondary derivative nouns, and
+numerous other alternations.
+</p>
+<p>
+With the closing of sutra four, the pratyahara a&#331; can be
+constructed spanning sutras one through four in their entirety,
+designating the complete set of vowels in the Sanskrit sound
+system: the short and long simple vowels, the syllabic liquids,
+and both grades of derived vowel. This single two-syllable term,
+a&#331;, is used with extraordinary frequency throughout the
+Ashtadhyayi wherever a rule needs to refer to "any vowel" without
+further qualification, replacing what would otherwise require a
+lengthy disjunctive list repeated at every occurrence.
+</p>
+<p>
+The four sutras devoted to vowels thus achieve a remarkable feat
+of compression: fourteen distinct vowel qualities, together with
+their short and long variants where applicable, are organized into
+four short sutras from which a graduated series of pratyaharas,
+ik, e&#331;, and a&#331; among others, can be extracted to refer
+with precision to exactly the subset of vowels relevant to any
+given grammatical operation, base grade alone, guna and vriddhi
+together, or the entire vowel inventory.
+</p>
+
+<h2 id="s8"><span class="num">08</span>Sutra Five: ha ya va ra &#7789;</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 5</div>
+<div class="sutra-text">ha ya va ra &#7789;</div>
+</div>
+<p>
+The fifth sutra opens the consonantal portion of the inventory
+with the aspirate h and the three semivowels ya, va, and ra,
+closed by the it marker &#7789;. These four sounds share the
+articulatory property of being produced with an incomplete closure
+of the vocal tract, allowing continuous airflow, in contrast to
+the stop consonants enumerated in the later sutras, which require
+complete momentary closure. The semivowels ya, va, and ra
+correspond directly to the vowels i, u, and &#7771; respectively,
+functioning as their non-syllabic, consonantal counterparts, a
+correspondence exploited throughout Panini's rules governing
+vowel-to-semivowel conversion at morpheme boundaries, a process
+traditionally termed samprasarana and its converse.
+</p>
+<p>
+The placement of h at the very head of the consonant sequence,
+before even the semivowels, reflects its unique articulatory
+status as a glottal sound produced without any specific oral place
+of closure, making it in some respects the least constrained
+consonant in the inventory and a natural bridge between the open
+vowel space of the first four sutras and the increasingly
+constricted consonants that follow. The pratyahara ha&#347;,
+extending from this sutra through to the sibilant class enumerated
+in sutra thirteen, is one of the most frequently invoked
+pratyaharas in the entire grammar, designating all consonants
+other than the nasals when combined appropriately, and reflecting
+the functional unity of continuant, non-nasal consonants
+recognized by the ancient phoneticians.
+</p>
+<p>
+It is worth observing that the semivowels ya, va, and ra
+additionally participate, together with la introduced in the
+following sutra, in the broader phonetic class sometimes referred
+to descriptively as the antahstha or "in-between" sounds,
+occupying an intermediate articulatory position between the fully
+open vowels and the fully closed stop consonants. This
+intermediate status is not merely a traditional descriptive label
+but corresponds to genuine acoustic and articulatory intermediacy
+recognized in modern phonetic analysis as well, where semivowels
+or glides are similarly treated as a class straddling the
+vowel-consonant boundary.
+</p>
+
+<h2 id="s9"><span class="num">09</span>Sutra Six: la &#7751;</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 6</div>
+<div class="sutra-text">la &#7751;</div>
+</div>
+<p>
+The sixth sutra consists of a single sound, the lateral semivowel
+la, closed by the it marker &#7751;. Its isolation into a sutra of
+its own, rather than being appended directly to the semivowels of
+the preceding sutra, is dictated entirely by the requirements of
+pratyahara formation elsewhere in the system: because the it
+marker &#7751; is reused from the first sutra, the repetition
+allows Panini's meta-rule governing pratyahara construction,
+discussed fully in a later section, to avoid ambiguity between
+different occurrences of the same it consonant, since the rule of
+formation specifies that the terminal it selected must be the
+first occurrence of that consonant following the starting sound.
+</p>
+<p>
+Phonetically, la is produced with a partial closure at the dental
+or alveolar ridge, allowing air to pass along one or both sides of
+the tongue, a manner of articulation termed lateral in modern
+phonetic terminology and recognized descriptively within the
+Sanskrit tradition through its classificatory grouping with the
+other semivowels despite its single-sutra isolation here. Its
+behavior in sandhi, the rules governing sound change at word and
+morpheme boundaries, is distinctive: la frequently triggers or
+undergoes assimilation with an adjacent nasal or dental sound, and
+Panini's rules addressing these patterns rely on the ability to
+designate la precisely, whether alone or in combination with the
+surrounding semivowels through the broader pratyahara formed by
+extending the reach of sutra five through sutra six.
+</p>
+
+<h2 id="s10"><span class="num">10</span>Sutra Seven: &#241;a ma &#331;a &#7751;a na m</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 7</div>
+<div class="sutra-text">&#241;a ma &#331;a &#7751;a na m</div>
+</div>
+<p>
+The seventh sutra enumerates the five nasal consonants of
+Sanskrit, one drawn from each of the five places of articulation
+examined in detail in the later section on the fivefold consonant
+system: &#241;a the palatal nasal, ma the labial nasal, &#331;a
+the velar nasal, &#7751;a the retroflex nasal, and na the dental
+nasal, closed by the it marker m. This sutra is distinctive within
+the fourteen in that it draws its members from across the entire
+articulatory range of the oral cavity, from the back of the throat
+to the lips, unified not by shared place of articulation but by
+shared manner of articulation: complete oral closure combined with
+continuous nasal airflow through the velum.
+</p>
+<p>
+The grouping of the five nasals into a single sutra, despite their
+articulatory diversity in terms of place, reflects a deliberate
+prioritization within Panini's system of manner-based classes that
+recur as a functional unit in sandhi and morphophonemic rules over
+strictly place-based classes. Nasal assimilation, whereby a nasal
+consonant preceding another consonant adopts the place of
+articulation of that following consonant, is one of the most
+pervasive sandhi phenomena in Sanskrit, and the ability to refer
+to "the nasals" as a single pratyahara-designated class, extracted
+from this sutra, is essential to stating such rules with the
+required generality.
+</p>
+<p>
+The ordering within the sutra itself, moving from the palatal
+&#241;a through the labial ma to the velar &#331;a, the retroflex
+&#7751;a, and finally the dental na, does not follow the standard
+front-to-back or back-to-front articulatory progression used
+elsewhere in the system, a fact that has drawn considerable
+commentarial attention across the grammatical tradition, with
+various explanations offered relating to euphonic considerations
+in the oral recitation of the sutra itself and to the specific
+combinatorial requirements of pratyaharas needed at particular
+points in the Ashtadhyayi.
+</p>
+
+<h2 id="s11"><span class="num">11</span>Sutra Eight: jha bha &#241;</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 8</div>
+<div class="sutra-text">jha bha &#241;</div>
+</div>
+<p>
+The eighth sutra opens the sequence of stop consonant sutras with
+jha, a sound not found as an independent phoneme in classical
+spoken Sanskrit but retained here for its technical function as a
+placeholder representing the voiced aspirated palatal stop
+position within the symmetrical structure of the sutra sequence,
+together with bha, the voiced aspirated labial stop, closed by the
+it marker &#241;. The technical, non-phonemic status of jha in
+this position has attracted significant grammatical commentary,
+since its practical use within the Ashtadhyayi is confined to
+specific technical operations, most notably as a designation
+applied to certain verbal terminations rather than to the palatal
+stop consonant it might otherwise be taken to represent.
+</p>
+<p>
+The sequence of sutras eight through twelve, taken together,
+enumerates the twenty stop consonants of Sanskrit organized into
+the four-way voicing and aspiration matrix examined at length in
+the sections on ghosha and prayatna below, arranged not by place
+of articulation in the manner of the standard pedagogical alphabet
+but by voicing and aspiration category across places, an
+arrangement whose logic is addressed comprehensively in the
+section on the overall structure of the sequence.
+</p>
+
+<h2 id="s12"><span class="num">12</span>Sutra Nine: gha &#7813;ha dha &#7779;</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 9</div>
+<div class="sutra-text">gha &#7813;ha dha &#7779;</div>
+</div>
+<p>
+The ninth sutra continues the voiced aspirated stop series begun
+in sutra eight, providing gha, the velar member, &#7813;ha, the
+retroflex member, and dha, the dental member, closed by the it
+marker &#7779;. Together, sutras eight and nine supply the
+complete set of voiced aspirated stops across all five places of
+articulation with the exception of the labial position already
+given in sutra eight as bha, an arrangement that again reflects
+the priority given throughout this portion of the sequence to
+completing a manner-based class before moving to the next.
+</p>
+<p>
+The voiced aspirated stops as a class play a substantial role in
+Sanskrit root structure and in the operation of Grassmann's
+Law-type dissimilation patterns recognized independently within
+the Sanskrit grammatical tradition long before their formal
+description in nineteenth-century comparative philology, where a
+root containing two aspirated consonants deaspirates the first
+when specific derivational suffixes are added, a phenomenon whose
+precise formulation depends on the ability to designate the
+aspirated stop series as a coherent pratyahara-accessible class.
+</p>
+
+<h2 id="s13"><span class="num">13</span>Sutra Ten: ja ba ga &#7693;a da &#347;</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 10</div>
+<div class="sutra-text">ja ba ga &#7693;a da &#347;</div>
+</div>
+<p>
+The tenth sutra provides the five voiced unaspirated stops, ja the
+palatal, ba the labial, ga the velar, &#7693;a the retroflex, and
+da the dental, closed by the it marker &#347;. Unlike the two
+preceding sutras devoted to the aspirated series, which required
+two sutras to accommodate the technical placeholder jha alongside
+the four genuinely occurring aspirated consonants, the unaspirated
+voiced series is complete in a single sutra of five members, one
+for each place of articulation, reflecting the fact that no
+comparable placeholder complication arises for this series.
+</p>
+<p>
+The voiced unaspirated stops, together with the voiced aspirated
+stops of the two preceding sutras, form the complete voiced
+obstruent inventory of Sanskrit, and the pratyahara spanning
+sutras eight through ten, terminating at &#347;, is used
+throughout the Ashtadhyayi to designate the class of voiced
+consonants collectively wherever a rule of sandhi or
+morphophonemic alternation depends on the voicing feature, a
+feature examined in detail in the dedicated section on ghosha and
+aghosha below.
+</p>
+
+<h2 id="s14"><span class="num">14</span>Sutra Eleven: kha pha cha &#7789;ha tha ca &#7789;a ta v</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 11</div>
+<div class="sutra-text">kha pha cha &#7789;ha tha ca &#7789;a ta v</div>
+</div>
+<p>
+The eleventh sutra is the longest of the fourteen, containing nine
+consonants: the five voiceless aspirated stops kha, pha, cha,
+&#7789;ha, and tha, followed by the four voiceless unaspirated
+stops other than the velar and labial, namely ca, &#7789;a, and
+ta, with the velar and labial voiceless unaspirated stops ka and
+pa reserved for the following sutra alongside the semivowel y. The
+closing it marker of sutra eleven is v.
+</p>
+<p>
+The reason for combining the voiceless aspirated series with
+three-fifths of the voiceless unaspirated series into a single
+sutra, rather than maintaining the one-sutra-per-manner-class
+pattern seen in the voiced series, lies once again in the specific
+pratyahara requirements of rules stated later in the Ashtadhyayi,
+where the grammar needs to designate precisely this combined
+nine-member set, together with precisely the two-member set of ka
+and pa reserved for the next sutra, in order to state certain
+rules of consonant alternation, particularly those governing
+reduplication in the perfect tense and intensive formations, with
+the required exactness. The division reflects downstream
+grammatical need rather than any single overriding phonetic
+principle, illustrating that the entire fourteen-sutra sequence
+was engineered as an integrated system in which every division
+point was chosen to serve the totality of the rules that follow,
+not merely local phonetic tidiness.
+</p>
+
+<h2 id="s15"><span class="num">15</span>Sutra Twelve: ka pa y</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 12</div>
+<div class="sutra-text">ka pa y</div>
+</div>
+<p>
+The twelfth sutra provides the two remaining voiceless unaspirated
+stops, ka the velar and pa the labial, closed by the it marker y.
+With this sutra, the full inventory of voiceless unaspirated stops
+across all five places, ka, ca, &#7789;a, ta, and pa, has been
+distributed across sutras eleven and twelve, completing the
+four-way voicing and aspiration matrix for all twenty stop
+consonants begun in sutra eight.
+</p>
+<p>
+The specific isolation of ka and pa into their own final pair,
+separate from the other three voiceless unaspirated stops, again
+serves the precise combinatorial requirements of reduplication
+rules and certain rules governing the doubling of consonants at
+morpheme junctures, where ka and pa pattern together in a manner
+distinct from ca, &#7789;a, and ta, a distinction that would be
+impossible to capture through a pratyahara if all five voiceless
+unaspirated stops had been placed in a single undivided sutra.
+</p>
+
+<h2 id="s16"><span class="num">16</span>Sutra Thirteen: &#347;a &#7779;a sa r</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 13</div>
+<div class="sutra-text">&#347;a &#7779;a sa r</div>
+</div>
+<p>
+The thirteenth sutra enumerates the three sibilants of Sanskrit,
+&#347;a the palatal sibilant, &#7779;a the retroflex sibilant, and
+sa the dental sibilant, closed by the it marker r. These three
+fricative consonants, together with the aspirate h of sutra five
+and sutra fourteen, constitute the complete set of Sanskrit
+consonants produced with a narrow but incomplete constriction of
+the vocal tract rather than a full stop closure, a manner of
+articulation termed fricative in modern phonetic terms and
+recognized within the Sanskrit tradition as a coherent class
+termed ushman, "the heat-sounds" or sibilant-and-aspirate class,
+in the descriptive terminology of the ancient phoneticians.
+</p>
+<p>
+The three sibilants play an especially prominent role in the
+sandhi rules governing the boundary between a word-final visarga,
+the voiceless aspiration mark, and a following consonant, where
+the specific sibilant produced depends systematically on the place
+of articulation of the consonant that follows, a rule that
+requires the grammar to designate the sibilant class as a coherent
+pratyahara-accessible unit, achieved here through the combination
+of sutra thirteen with the surrounding sutras as required by the
+specific rule in question.
+</p>
+
+<h2 id="s17"><span class="num">17</span>Sutra Fourteen: ha l</h2>
+<div class="sutra-block">
+<div class="sutra-num">Sutra 14</div>
+<div class="sutra-text">ha l</div>
+</div>
+<p>
+The fourteenth and final sutra consists of a single sound, ha,
+closed by the it marker l. This is a second occurrence of the
+sound ha, the first having already appeared at the head of sutra
+five; its repetition here at the very close of the sequence is not
+an oversight or redundancy but a further instance of the same
+deliberate design principle observed in sutra six, where a sound
+is repeated specifically in order to make available, through the
+meta-rule of pratyahara formation, a terminal reference point that
+could not otherwise be reached.
+</p>
+<p>
+With the closing of this final sutra, the entire phonetic
+inventory required by Panini's grammar has been enumerated, and
+the it marker l, the very last segment of the entire sequence, is
+put to extraordinary use throughout the Ashtadhyayi: the
+pratyahara hal, formed by combining the initial h of the fifth
+sutra, in its first occurrence, with this final l, designates the
+complete set of all consonants in the Sanskrit sound system, one
+of the single most frequently invoked technical terms in the
+entire grammar. The pratyahara al, formed differently, and the
+pratyahara a&#331; already discussed, together with hal, exhaust
+between them the entire sound system of Sanskrit organized into
+its two most fundamental classes, vowels and consonants, a
+division achieved with a economy of notation that remains, by any
+measure, one of the most efficient phonological indexing systems
+ever devised for a natural language.
+</p>
+
+<h2 id="s18"><span class="num">18</span>The Logic of the Arrangement</h2>
+<p>
+Having examined each of the fourteen sutras individually, it is
+now possible to state the overall logic of the arrangement as a
+unified system. Four organizing principles operate simultaneously
+across the sequence, and the specific wording of every sutra
+represents a negotiated resolution among the competing demands of
+these four principles, rather than the straightforward application
+of any single one.
+</p>
+<h3>The Principle of Manner-Class Priority</h3>
+<p>
+The first and most visible principle is that sounds sharing a
+manner of articulation, vowels, semivowels, nasals, aspirated
+stops, unaspirated stops, sibilants, are generally grouped
+together before the sequence moves to the next manner class, in
+preference to grouping by place of articulation, which is the
+organizing principle of the standard pedagogical alphabet chart
+examined in a later section. This reflects the grammatical reality
+that Sanskrit sandhi and morphophonemic rules overwhelmingly
+target manner-based classes, "the voiced consonants," "the
+nasals," "the sibilants," far more often than they target a single
+place of articulation in isolation.
+</p>
+<h3>The Principle of Derivational Ordering</h3>
+<p>
+The second principle, visible specifically within the vowel
+sutras, is that sounds are ordered to reflect their derivational
+relationships: base grade before guna grade before vriddhi grade,
+ensuring that any pratyahara formed by extending from the start of
+the vowel sequence to an intermediate point captures exactly the
+base and guna grades without prematurely including the vriddhi
+grade, and only a pratyahara extending to the full close of sutra
+four captures all three grades together.
+</p>
+<h3>The Principle of Downstream Pratyahara Necessity</h3>
+<p>
+The third principle, and in many respects the deepest, is that the
+specific division points between sutras, and the specific choice
+of which it marker to attach to each sutra, were determined by
+working backward from the full set of pratyaharas that the
+completed Ashtadhyayi would need to invoke. Wherever the grammar
+requires a rule to refer to some functionally coherent set of
+sounds that does not correspond to a simple, single manner class,
+ka and pa in isolation from the other unaspirated stops being the
+clearest example already examined, the sutra sequence is divided
+at precisely the point needed to make that set expressible as a
+pratyahara.
+</p>
+<h3>The Principle of It-Marker Non-Ambiguity</h3>
+<p>
+The fourth principle governs the specific consonant chosen as the
+it marker for each sutra and the deliberate repetition of certain
+sounds, ha and n most notably, at points later in the sequence.
+Because the rule of pratyahara formation, examined fully in the
+following section, specifies that a pratyahara is formed by
+combining a starting sound with the first subsequent occurrence of
+a given it consonant, the sutras must be arranged so that no
+unintended pratyahara is accidentally formed and so that every
+intended pratyahara can be formed without ambiguity. This
+requirement occasionally forces sounds to be repeated, as with la
+and ha, purely to make an otherwise unreachable it marker
+available at the correct point in the sequence.
+</p>
+<p>
+Taken together, these four principles demonstrate that the
+fourteen sutras were not composed as a simple inventory to be
+memorized and then applied loosely by the grammarian's judgment.
+They were composed as a precision instrument, in which the exact
+wording of each sutra was fixed by working through the entire
+downstream grammar and verifying that every pratyahara the grammar
+would need could be extracted cleanly, and that no pratyahara the
+grammar did not intend to designate could be formed by accident.
+This is a level of systematic design that places the Maheshvara
+Sutras among the most sophisticated formal artifacts of the
+ancient linguistic world.
+</p>
+
+<h2 id="s19"><span class="num">19</span>Pratyahara: The Rule of Formation</h2>
+<p>
+The formal rule governing the construction of a pratyahara is
+itself stated as the very first operative rule of the Ashtadhyayi,
+immediately following the fourteen sutras, in the sutra
+traditionally numbered 1.1.71, conventionally rendered as "adir
+antyena sahita," meaning "the initial sound, combined with the
+final marker, forms a designation inclusive of what lies between."
+This single short rule is the key that unlocks the entire
+compressive power of the fourteen preceding sutras.
+</p>
+<p>
+The mechanical procedure specified by this rule operates as
+follows. To form a pratyahara, the grammarian selects a starting
+sound from anywhere within the fourteen sutras, and a terminating
+it marker from anywhere at or after that starting point. The
+resulting pratyahara, written as the starting sound followed
+directly by the terminating it marker with no space between them,
+designates the full set of ordinary, pronounceable sounds that lie
+between the starting sound and the it marker in the linear
+sequence of the fourteen sutras, read as one continuous string
+with the it markers themselves excluded from the designated set
+except insofar as they mark the boundary.
+</p>
+<div class="note">
+<div class="note-title">Worked Example of the Formation Rule</div>
+<p style="margin:0;">Consider the formation of the pratyahara ac. The starting sound a is the very first sound of sutra one. The terminating it marker c is the it marker of sutra four. Reading the fourteen sutras as one continuous string from the initial a through to the it marker c, and excluding the intervening it markers &#7751; and k and &#7749; that appear within sutras one through three, the pratyahara ac designates the complete set: a, i, u, &#7771;, &#7735;, e, o, ai, au, that is, every vowel in the Sanskrit sound system. This is the complete vowel inventory expressed in exactly two syllables.</p>
+</div>
+<p>
+The elegance of this rule lies in its complete generality: it
+requires no special-casing, no exceptions, and no additional
+vocabulary beyond the ability to locate a starting sound and a
+terminal it marker within a fixed, memorized sequence. Once a
+student of the grammar has committed the fourteen sutras to
+memory, in their fixed linear order, the formation of any
+pratyahara used anywhere in the Ashtadhyayi becomes a mechanical,
+almost algorithmic procedure, reducible to locating two points in
+a known sequence and reading off everything in between.
+</p>
+<p>
+It is worth pausing to appreciate the formal sophistication of
+this device from the standpoint of information theory and formal
+language design. The fourteen sutras, comprising in total
+forty-two ordinary sound segments and fourteen it markers, when
+combined with the single formation rule of 1.1.71, generate a very
+large number of distinct addressable subsets of the Sanskrit sound
+inventory, far more than could be listed exhaustively, while
+requiring the grammarian to memorize only the fixed sequence
+itself and the one formation rule. This is precisely the kind of
+compression achieved in modern formal systems through the
+definition of named ranges or intervals over an ordered alphabet,
+and the parallel to techniques such as character classes in
+regular expression notation, examined further in a later section
+devoted to the computational significance of the system, is not
+superficial but structural.
+</p>
+
+<h2 id="s20"><span class="num">20</span>The Major Pratyaharas and Their Grammatical Function</h2>
+<p>
+The Ashtadhyayi employs several dozen distinct pratyaharas over
+the course of its roughly four thousand rules, but a relatively
+small number of these recur with such frequency that they function
+as the basic working vocabulary of the entire grammar. The table
+below presents the most important of these, together with the
+sound class each designates and a summary of its primary
+grammatical role.
+</p>
+<table>
+<caption>Principal Pratyaharas of the Ashtadhyayi</caption>
+<tr><th>Pratyahara</th><th>Span</th><th>Sounds Designated</th><th>Primary Grammatical Use</th></tr>
+<tr><td class="skt">ac</td><td>Sutra 1 to Sutra 4</td><td>All vowels</td><td>Marking vowel-conditioned rules and vowel sandhi</td></tr>
+<tr><td class="skt">ik</td><td>Sutra 1 to Sutra 2</td><td>i, u, &#7771;, &#7735; and long forms</td><td>Vowels eligible for guna and vriddhi substitution</td></tr>
+<tr><td class="skt">e&#331;</td><td>Sutra 3 to Sutra 3</td><td>e, o</td><td>Guna-grade vowels as a targeted class</td></tr>
+<tr><td class="skt">a&#331;</td><td>Sutra 1 to Sutra 3</td><td>a, i, u, &#7771;, &#7735;, e, o</td><td>Vowels excluding the vriddhi diphthongs</td></tr>
+<tr><td class="skt">hal</td><td>Sutra 5 to Sutra 14</td><td>All consonants</td><td>Marking consonant-conditioned rules generally</td></tr>
+<tr><td class="skt">ha&#347;</td><td>Sutra 5 to Sutra 13</td><td>All consonants except final h</td><td>Consonant sandhi excluding the closing aspirate</td></tr>
+<tr><td class="skt">jhal</td><td>Sutra 8 to Sutra 14</td><td>All stops and sibilants</td><td>Obstruents as a functional class in sandhi</td></tr>
+<tr><td class="skt">ya&#331;</td><td>Sutra 5 to Sutra 6</td><td>ya, va, ra, la</td><td>Semivowels as a targeted class</td></tr>
+<tr><td class="skt">&#241;am</td><td>Sutra 7 to Sutra 7</td><td>&#241;a, ma, &#331;a, &#7751;a, na</td><td>All five nasal consonants</td></tr>
+<tr><td class="skt">khay</td><td>Sutra 11 to Sutra 12</td><td>Voiceless aspirated and unaspirated stops</td><td>Voiceless stop class in reduplication rules</td></tr>
+<tr><td class="skt">jhay</td><td>Sutra 8 to Sutra 12</td><td>All twenty stop consonants</td><td>Complete stop consonant class</td></tr>
+<tr><td class="skt">&#347;ar</td><td>Sutra 13 to Sutra 13</td><td>&#347;a, &#7779;a, sa</td><td>The three sibilants as a class</td></tr>
+<tr><td class="skt">al</td><td>Sutra 1 to Sutra 14</td><td>Every sound in the inventory</td><td>Unrestricted reference to any sound whatsoever</td></tr>
+</table>
+<p>
+The pratyahara al, spanning the entire fourteen-sutra sequence
+from the very first a to the very last l, deserves particular note
+as the maximally general pratyahara of the system, used whenever a
+rule of the Ashtadhyayi needs to refer to a sound of any kind
+without restriction. Its constant appearance throughout the
+grammar, often in rules governing the most general operations of
+sandhi and augmentation, illustrates that even the most inclusive
+possible designation remains available within the same
+two-syllable notational economy as the most narrowly restricted
+pratyaharas.
+</p>
+
+<h2 id="s21"><span class="num">21</span>Pratyaharas in Operation: Worked Examples from the Ashtadhyayi</h2>
+<p>
+To appreciate fully how the pratyahara system functions within an
+operating grammatical rule, it is useful to examine a small number
+of representative sutras from the Ashtadhyayi in which pratyaharas
+do the essential work of specifying the conditions and scope of
+the rule.
+</p>
+<h3>Vowel Sandhi and the Pratyahara ac</h3>
+<p>
+Rules governing the fusion of adjacent vowels across a word or
+morpheme boundary, a phenomenon pervasive in connected Sanskrit
+speech and writing, are stated using the pratyahara ac to specify
+that the environment in question is vowel-adjacent-to-vowel.
+Without this two-syllable designation, each such rule would need
+to enumerate the nine relevant vowel qualities individually and
+account for their long and short variants, a task that would
+multiply the length of the sandhi portion of the Ashtadhyayi many
+times over.
+</p>
+<h3>Consonant Assimilation and the Pratyahara jhal</h3>
+<p>
+Rules governing the voicing assimilation of a consonant to a
+following consonant, whereby an obstruent takes on the voicing
+quality of what follows it across a morpheme boundary, are stated
+using the pratyahara jhal to designate the class of stops and
+sibilants subject to the alternation, again collapsing what would
+otherwise require an exhaustive listing of up to twenty individual
+consonants into a single compact term.
+</p>
+<h3>Guna Substitution and the Pratyahara ik</h3>
+<p>
+The single most important rule governing the derivation of
+guna-grade vowels, which underlies an enormous portion of Sanskrit
+verbal and nominal morphology, is stated using the pratyahara ik
+to designate precisely the set of vowels eligible for the
+substitution, i, u, and the syllabic liquids, while explicitly
+excluding a, which does not undergo guna strengthening in the same
+manner. The precision with which ik picks out exactly this set,
+and no more, is a direct consequence of the deliberate division
+between sutras one and two examined earlier.
+</p>
+<p>
+These three examples, drawn from among the most frequently cited
+rules in the entire grammatical tradition, demonstrate a
+consistent pattern: wherever the Ashtadhyayi states a rule whose
+scope of application is defined by a class of sounds, that class
+is almost invariably expressed through a pratyahara rather than
+through an explicit list, and the specific pratyahara chosen is
+always the narrowest one available that exactly matches the
+intended scope, a testament to the exhaustive planning that must
+have preceded the final fixing of the fourteen sutras in their
+present form.
+</p>
+
+<h2 id="s22"><span class="num">22</span>Varna: The Ordered Unit of Sound</h2>
+<p>
+The Sanskrit term varna occupies a foundational position in Indian
+linguistic thought, and its meaning resists a single, exact
+translation into any modern language. It is variously rendered as
+"letter," "sound," or "phoneme," and each of these translations
+captures a genuine aspect of the term while simultaneously
+obscuring others. A rigorous treatment of the concept must
+therefore proceed by examining what varna denotes within the
+specific frameworks of Sanskrit phonetics, Shiksha, and grammar,
+rather than by importing a ready-made modern category and assuming
+a one-to-one correspondence.
+</p>
+<p>
+Within the Shiksha and Pratishakhya literature, the disciplines
+devoted respectively to the general science of correct
+articulation and to the specific phonetic rules governing
+recitation of a particular Vedic text, varna refers to a distinct,
+articulated unit of speech sound recognized as a discrete member
+of the sound system of the language, possessing a determinate
+place of articulation, a determinate manner of articulation, and a
+determinate duration. Crucially, the concept as used in this
+literature is fundamentally oral and acoustic in character: a
+varna is defined by its production in the vocal apparatus and its
+perception by the ear, not by any written representation.
+</p>
+<p>
+This point deserves emphasis because it runs against a common
+modern assumption, encouraged by the very word "letter" often used
+to translate varna, that the concept is fundamentally a written or
+orthographic one. The historical relationship between spoken
+Sanskrit and its written representation in various regional
+scripts, of which Devanagari is only the most familiar and
+relatively late-developing example, makes clear that the sound
+system, and the analytical vocabulary developed to describe it,
+long predates any specific script used to record it. The varna
+framework was fully developed, including its organization by place
+and manner of articulation examined in the following sections,
+within an oral tradition of Vedic recitation that placed the
+highest possible value on the precise, unchanging reproduction of
+sound across many centuries of purely oral transmission, a fact
+that itself explains the extraordinary precision the tradition
+achieved in phonetic description, since no written record could be
+relied upon to preserve pronunciation and the entire burden of
+preservation fell upon a rigorously codified oral-articulatory
+analysis.
+</p>
+<p>
+Within Panini's own grammatical framework specifically, the term
+varna is used with a certain technical precision distinct from,
+though closely related to, its broader use in the Shiksha
+tradition. For Panini, a varna is the minimal unit that can be
+referred to within a grammatical rule, whether directly by name or
+indirectly through a pratyahara, and the entire apparatus of the
+fourteen Maheshvara Sutras exists precisely in order to enumerate
+the full inventory of varnas relevant to the grammar and to make
+every subset of that inventory addressable. The concept of varna
+is thus not merely a phonetic category imported into the grammar
+from outside, but is itself partly constituted by its role within
+the formal system of rule-writing that the grammar establishes.
+</p>
+<p>
+A further dimension of the varna concept, less commonly discussed
+in introductory treatments but significant within the fuller
+tradition, concerns the distinction between a varna considered as
+an abstract, repeatable type and a varna considered as a
+particular instance of articulation on a given occasion of speech.
+The tradition recognizes that no two utterances of what is
+nonetheless treated as "the same" varna are acoustically identical
+in every physical respect, variation in pitch, loudness, and
+precise articulatory timing being inevitable across different
+speakers and occasions, yet the grammatical and phonetic system
+treats these variations as irrelevant to the identity of the varna
+as a linguistic unit. This distinction between type and token,
+though not framed in precisely these terms within the Sanskrit
+tradition itself, is functionally present throughout the treatment
+of varna in both the Shiksha and grammatical literature, and
+represents an early and sophisticated recognition of a distinction
+that would only be made explicit in Western linguistic philosophy
+many centuries later.
+</p>
+
+<h2 id="s23"><span class="num">23</span>Varna and the Modern Phoneme: A Comparative Analysis</h2>
+<p>
+Modern linguistics employs the term phoneme to denote a minimal
+unit of sound within a given language that serves to distinguish
+one word or morpheme from another, a category defined
+operationally through the identification of minimal pairs, words
+differing in meaning by the substitution of a single sound, and
+through the analysis of complementary and contrastive distribution
+among the various physical sound realizations, termed allophones,
+that a single phoneme may exhibit across different phonetic
+environments.
+</p>
+<p>
+The Sanskrit varna concept overlaps substantially with the modern
+phoneme in its function of picking out a contrastive unit of sound
+relevant to the structure of the language, and the analytical
+techniques of the ancient phoneticians, careful attention to place
+and manner of articulation, careful attention to the conditions
+under which one sound alternates with another, bear a striking
+structural resemblance to the methodology of modern phonemic
+analysis. It would nonetheless be a significant overstatement, and
+a failure of the kind of objective comparative rigor this study
+aims to maintain, to declare the two concepts simply identical.
+</p>
+<p>
+Several genuine points of divergence deserve to be stated plainly.
+First, the varna concept developed within, and remains embedded
+in, a framework whose primary practical concern was the correct
+oral performance of a fixed sacred text, the Veda, a concern that
+shaped its emphasis on precise articulatory description, duration,
+and pitch accent to a degree not paralleled in the primarily
+structural, contrast-based concerns of modern phonemic theory.
+Second, the modern phoneme is defined relationally, purely in
+terms of its contrastive function within a particular language's
+sound system, and different languages may carve up phonetic space
+into phonemic categories in ways that do not correspond to
+Sanskrit's classification, whereas the varna inventory as fixed in
+the Maheshvara Sutras is a specific, historically given
+enumeration for one language at one stage of its development, not
+a general theoretical category applicable cross-linguistically in
+the manner the term phoneme is intended to be. Third, certain
+distinctions maintained as separate varnas within the Sanskrit
+tradition, such as the short and long grades of a given vowel
+quality, or the various grades of vowel gradation examined in the
+discussion of the Maheshvara Sutras above, are treated in some
+modern phonemic analyses as belonging to a single underlying
+phoneme subject to a general rule of length or gradation, a
+difference of theoretical framing rather than of empirical
+observation, but one worth noting for a reader seeking to map the
+two systems onto each other precisely.
+</p>
+<p>
+The most productive way to hold these two frameworks in mind
+simultaneously is neither to treat them as simply the same concept
+under different names, nor to treat their resemblance as merely
+superficial, but to recognize that both frameworks arose from
+careful, empirically grounded attention to the same underlying
+physical reality, the articulated sounds of human speech, and that
+their points of convergence testify to the objectivity of that
+underlying reality, while their points of divergence testify to
+the different theoretical purposes, oral-liturgical precision on
+one hand, cross-linguistic structural generalization on the other,
+that shaped each framework's specific choices of emphasis and
+categorization.
+</p>
+
+<h2 id="s24"><span class="num">24</span>The Organization of the Sanskrit Alphabet</h2>
+<p>
+Distinct from the specialized ordering of the Maheshvara Sutras,
+examined at length above, the standard pedagogical presentation of
+the Sanskrit sound inventory, the ordering familiar from primers,
+dictionaries, and the Devanagari script chart, follows a different
+and in certain respects more transparently articulatory organizing
+principle. This standard ordering moves systematically from sounds
+produced with minimal obstruction of the vocal tract toward sounds
+produced with progressively greater obstruction, and within the
+consonants, from the back of the oral cavity toward the front.
+</p>
+<p>
+The sequence opens with the vowels, presented as a continuous
+block moving from the simple vowels through the syllabic liquids
+to the guna and vriddhi grades, mirroring the internal order of
+the first four Maheshvara Sutras though presented here without
+division into separate technical units. The vowels are followed by
+the anusvara and visarga, two secondary sounds of restricted
+distribution, and then by the consonants, presented in five
+successive groups of five sounds each, corresponding to the five
+places of articulation examined in detail in the following
+section, moving from the velar group at the back of the mouth to
+the labial group at the lips, with the semivowels, sibilants, and
+aspirate presented as a final supplementary set.
+</p>
+<p>
+The rationale for this back-to-front, open-to-closed ordering
+reflects a principle recognized explicitly within the ancient
+phonetic tradition: that the vocal tract can be conceived as a
+single continuous channel extending from the glottis to the lips,
+and that the various places of articulation can be mapped onto
+successive points along this channel. Beginning the consonant
+sequence with the velars, produced nearest the glottis, and
+proceeding forward to the labials, produced at the furthest
+extremity, provides a natural, physically motivated presentation
+that aids both the pedagogical task of teaching correct
+pronunciation and the descriptive task of stating general phonetic
+principles that apply differentially according to a sound's
+position along this articulatory continuum.
+</p>
+<p>
+It is worth noting explicitly that this standard, pedagogically
+transparent ordering and the specialized ordering of the
+Maheshvara Sutras are not competing or inconsistent systems but
+complementary ones, developed for different purposes and existing
+side by side within the same broader tradition. A student learning
+to pronounce Sanskrit correctly, or a lexicographer arranging a
+dictionary, has every reason to prefer the standard back-to-front,
+place-based ordering, since it groups together sounds that share
+an articulatory location and therefore share many practical points
+of pronunciation guidance. A grammarian writing formal rules of
+derivation and sandhi, by contrast, requires an ordering optimized
+for the compact designation of functionally relevant sound
+classes, which as demonstrated at length above cut across place of
+articulation far more often than they respect it, and for this
+purpose the specialized ordering of the fourteen sutras is
+indispensable. The coexistence of both orderings within the same
+intellectual tradition is itself a mark of that tradition's
+sophistication: it did not settle for a single all-purpose
+ordering but developed distinct, purpose-built arrangements of the
+identical underlying sound inventory for distinct analytical
+tasks.
+</p>
+
+<h2 id="s25"><span class="num">25</span>The Fivefold Consonant System</h2>
+<p>
+The twenty-five stop consonants of Sanskrit, excluding the
+semivowels, sibilants, and aspirate treated as a separate residual
+class, are organized with striking regularity into five groups of
+five, each group corresponding to a single place of articulation
+and each group internally structured according to an identical
+four-way distinction of voicing and aspiration, followed by a
+nasal member. This fivefold structure, sometimes referred to
+descriptively as the varga system, from the Sanskrit term varga
+meaning "group" or "class," represents one of the clearest and
+most systematically exploited regularities in the entire Sanskrit
+sound inventory.
+</p>
+<p>
+Each of the five groups, the velar or kanthya group, the palatal
+or talavya group, the retroflex or murdhanya group, the dental or
+dantya group, and the labial or oshthya group, contains exactly
+five members in a fixed internal order: first, the voiceless
+unaspirated stop; second, the voiceless aspirated stop; third, the
+voiced unaspirated stop; fourth, the voiced aspirated stop; and
+fifth, the nasal consonant sharing the same place of articulation
+as the preceding four. This internal five-position template is
+applied without exception across all five places, producing a
+perfectly regular twenty-five-cell matrix.
+</p>
+<table>
+<caption>The Fivefold Consonant Matrix (Varga System)</caption>
+<tr><th>Place</th><th>Voiceless Unasp.</th><th>Voiceless Asp.</th><th>Voiced Unasp.</th><th>Voiced Asp.</th><th>Nasal</th></tr>
+<tr><td>Velar (Kanthya)</td><td class="skt">ka</td><td class="skt">kha</td><td class="skt">ga</td><td class="skt">gha</td><td class="skt">&#331;a</td></tr>
+<tr><td>Palatal (Talavya)</td><td class="skt">ca</td><td class="skt">cha</td><td class="skt">ja</td><td class="skt">jha</td><td class="skt">&#241;a</td></tr>
+<tr><td>Retroflex (Murdhanya)</td><td class="skt">&#7789;a</td><td class="skt">&#7789;ha</td><td class="skt">&#7693;a</td><td class="skt">&#7693;ha</td><td class="skt">&#7751;a</td></tr>
+<tr><td>Dental (Dantya)</td><td class="skt">ta</td><td class="skt">tha</td><td class="skt">da</td><td class="skt">dha</td><td class="skt">na</td></tr>
+<tr><td>Labial (Oshthya)</td><td class="skt">pa</td><td class="skt">pha</td><td class="skt">ba</td><td class="skt">bha</td><td class="skt">ma</td></tr>
+</table>
+<p>
+This matrix organization is not merely an elegant descriptive
+convenience imposed after the fact by later commentators; it
+corresponds to a genuine phonological regularity in the structure
+of the language itself, since Sanskrit morphophonemic rules of
+sandhi and consonant alternation apply overwhelmingly in a manner
+that is systematic across the rows and columns of exactly this
+matrix. A rule of voicing assimilation, for instance,
+characteristically moves a consonant from its position in the
+voiceless unaspirated column to the corresponding position in the
+voiced unaspirated column while holding its place of articulation,
+its row, fixed, and the ancient grammarians' explicit recognition
+of this two-dimensional structure, centuries before comparable
+matrices were developed for other languages within the Western
+phonetic tradition, stands as one of the notable achievements of
+Sanskrit linguistic science.
+</p>
+<p>
+The consistent application of the five-by-five matrix across the
+entire stop consonant inventory also explains why the fourteen
+Maheshvara Sutras, despite reordering the sounds away from a
+simple place-based sequence for the reasons examined at length
+above, nonetheless preserve the internal four-way voicing and
+aspiration distinction within each manner-based group they
+present, sutra eight and nine together giving the voiced aspirated
+row, sutra ten giving the voiced unaspirated row, and sutras
+eleven and twelve together giving the voiceless row in both its
+aspirated and unaspirated forms. The two orderings, in other
+words, agree entirely on the underlying two-dimensional matrix
+structure of the consonant system; they differ only in which
+dimension, place or manner, is used as the primary axis of linear
+presentation.
+</p>
+
+<h2 id="s26"><span class="num">26</span>Sthana: Place of Articulation</h2>
+<p>
+The Sanskrit phonetic tradition analyzes every sound of the
+language according to its sthana, the specific location within the
+vocal tract at which the primary articulatory constriction or
+closure occurs. This analysis constitutes a physically grounded
+map of speech production, developed through careful introspective
+and observational attention to the mechanics of the vocal
+apparatus, and it underlies both the standard alphabetic ordering
+examined above and the fivefold consonant matrix.
+</p>
+<p>
+The tradition recognizes a fixed set of primary places of
+articulation, each associated with a specific active or passive
+articulator within the vocal tract, and each given a specific
+Sanskrit technical name still in use within the grammatical and
+phonetic literature today.
+</p>
+<table>
+<caption>The Places of Articulation (Sthana) Recognized in Sanskrit Phonetics</caption>
+<tr><th>Sanskrit Term</th><th>Common Rendering</th><th>Articulatory Description</th><th>Sounds Produced</th></tr>
+<tr><td>Kantha</td><td>Guttural / Velar</td><td>Root of the tongue against the soft palate, near the throat</td><td class="skt">a ka kha ga gha &#331;a ha visarga</td></tr>
+<tr><td>Talu</td><td>Palatal</td><td>Middle of the tongue against the hard palate</td><td class="skt">i ca cha ja jha &#241;a ya &#347;a</td></tr>
+<tr><td>Murdhan</td><td>Retroflex / Cerebral</td><td>Tongue tip curled back against the hard palate</td><td class="skt">&#7771; &#7789;a &#7789;ha &#7693;a &#7693;ha &#7751;a ra &#7779;a</td></tr>
+<tr><td>Danta</td><td>Dental</td><td>Tongue tip against the upper front teeth</td><td class="skt">ta tha da dha na la sa</td></tr>
+<tr><td>Oshtha</td><td>Labial</td><td>The two lips brought together or rounded</td><td class="skt">u pa pha ba bha ma</td></tr>
+<tr><td>Nasika</td><td>Nasal cavity</td><td>Velum lowered, secondary resonance through the nose</td><td>All five nasal consonants, secondarily</td></tr>
+<tr><td>Kantha-Talu</td><td>Velar-Palatal</td><td>Combined articulation for compound vowel quality</td><td class="skt">e ai</td></tr>
+<tr><td>Kantha-Oshtha</td><td>Velar-Labial</td><td>Combined articulation for compound vowel quality</td><td class="skt">o au</td></tr>
+<tr><td>Danta-Oshtha</td><td>Dental-Labial</td><td>Lower lip against the upper front teeth</td><td class="skt">va</td></tr>
+</table>
+<p>
+Several features of this system merit closer examination. First,
+the tradition explicitly recognizes compound places of
+articulation for the diphthongs e, ai, o, and au, describing them
+as involving two successive or simultaneous articulatory gestures
+rather than treating them as unanalyzable simple sounds, a level
+of articulatory precision that anticipates the modern phonetic
+treatment of diphthongs as sounds involving articulatory movement
+between two target positions. Second, the semivowel va is
+correctly analyzed as involving both the teeth and the lip, a
+labiodental articulation, a distinction not always maintained in
+less careful phonetic descriptions but preserved with precision in
+the classical Sanskrit tradition.
+</p>
+<p>
+Third, the vowels a, i, and u are each assigned to the same place
+of articulation as the consonant class most closely associated
+with them, a, the most open vowel, to the guttural place shared
+with the velar consonants; i to the palatal place shared with the
+palatal consonants; u to the labial place shared with the labial
+consonants, reflecting the historical and articulatory
+relationship between these vowels and their corresponding
+semivowels ya, from i, and va, from u, examined in the discussion
+of sutra five above. This is a further instance of the tradition's
+consistent attention to genuine articulatory relationships between
+sounds that a purely surface-level or orthographic analysis would
+be likely to overlook.
+</p>
+<p>
+The analysis of sthana was not undertaken as an abstract exercise
+but served an intensely practical purpose within the Vedic
+recitation tradition: correct pronunciation of the sacred texts
+was considered essential to their efficacy, and the precise
+articulatory description of each sound provided by the sthana
+analysis, transmitted orally from teacher to student across
+generations, was the primary technology by which correct
+pronunciation was preserved and errors were identified and
+corrected, in the complete absence of any audio recording
+technology and often in the presence of only partial or
+late-developing written textual support.
+</p>
+
+<h2 id="s27"><span class="num">27</span>Prayatna: Internal and External Effort</h2>
+<p>
+Alongside the analysis of sthana, place of articulation, the
+Sanskrit phonetic tradition developed a parallel and equally
+rigorous analysis of prayatna, the articulatory effort involved in
+producing a given sound, understood as encompassing both the
+specific gesture of closure or constriction at the place of
+articulation and the state of the glottis and the accompanying
+airflow during production. The tradition divides prayatna into two
+broad categories, termed abhyantara prayatna, internal effort, and
+bahya prayatna, external effort.
+</p>
+<h3>Abhyantara Prayatna: Internal Effort</h3>
+<p>
+Internal effort refers to the degree of contact achieved between
+the active and passive articulators at the place of articulation
+identified by the sthana analysis, and the tradition recognizes
+several discrete grades of this contact. Complete closure,
+sprishta, characterizes the stop consonants, where the
+articulators come into full contact, momentarily blocking the
+airflow entirely. Slight contact, ishat-sprishta, characterizes
+the semivowels, where the articulators approach closely without
+full occlusion. Open approximation, ishat-vivrita, characterizes
+the sibilants, where a narrow channel is maintained producing
+audible friction. Fully open, vivrita, characterizes the vowels,
+where the vocal tract remains unobstructed along the central axis.
+</p>
+<h3>Bahya Prayatna: External Effort</h3>
+<p>
+External effort refers to the state of the glottis and the
+associated airflow properties accompanying the primary
+articulatory gesture, and the tradition recognizes several
+parameters within this category as well: voicing, whether the
+vocal folds vibrate during production, examined in detail in the
+following section on ghosha and aghosha; aspiration, whether an
+audible breath accompanies the release of a stop consonant,
+examined in detail in the section on alpaprana and mahaprana; and
+additional parameters governing pitch accent, relevant to Vedic
+recitation specifically, where each syllable is marked for one of
+several tonal categories affecting its relative pitch within the
+utterance.
+</p>
+<p>
+The combined analysis of sthana and prayatna together provides
+what amounts to a complete, multi-dimensional articulatory
+specification for every varna in the Sanskrit inventory: a given
+consonant is fully and unambiguously identified by the
+intersection of its place of articulation, its degree of internal
+contact, its voicing status, and its aspiration status, a
+specification of essentially the same logical structure, though
+independently developed and expressed in different technical
+vocabulary, as the place-manner-voicing feature matrices used in
+modern articulatory phonetics to characterize the consonant
+inventories of the world's languages.
+</p>
+
+<h2 id="s28"><span class="num">28</span>Ghosha and Aghosha: The Voicing Parameter</h2>
+<p>
+Among the parameters of external effort, bahya prayatna, the
+distinction between ghosha, voicing, and aghosha, voicelessness,
+ranks as one of the most grammatically consequential, governing an
+enormous range of sandhi phenomena throughout the language. A
+voiced sound, ghoshavat, is produced with vibration of the vocal
+folds throughout its articulation, while a voiceless sound,
+aghosha, is produced without such vibration, the airflow passing
+through an open glottis.
+</p>
+<p>
+Within the fivefold consonant matrix examined above, the voicing
+parameter divides each row of five members cleanly into two
+voiceless members, the unaspirated and aspirated stops in the
+first two columns, and three voiced members, the unaspirated and
+aspirated stops in the third and fourth columns together with the
+nasal in the fifth column, since nasals are, without exception in
+Sanskrit, produced with vocal fold vibration. All vowels and
+semivowels are likewise voiced without exception, leaving
+voicelessness as a distinguishing feature relevant only within the
+stop and sibilant classes.
+</p>
+<p>
+The grammatical significance of this parameter is difficult to
+overstate. Sanskrit sandhi rules governing the combination of a
+word-final consonant with an initial sound of the following word
+depend pervasively on matching or mismatching voicing values, and
+the pratyaharas examined in the earlier section on pratyahara
+function, particularly the distinction between the pratyahara
+spanning the voiced obstruents, sutras eight through ten, and the
+pratyahara spanning the voiceless obstruents, sutras eleven and
+twelve, exist specifically because Panini's rules need to refer to
+these two voicing classes as coherent, addressable units with the
+same frequency that they need to refer to place-based or
+manner-based classes.
+</p>
+
+<h2 id="s29"><span class="num">29</span>Alpaprana and Mahaprana: The Aspiration Parameter</h2>
+<p>
+A second parameter of external effort central to Sanskrit
+phonology is the distinction between alpaprana, literally "little
+breath," unaspirated articulation, and mahaprana, literally "great
+breath," aspirated articulation. This distinction produces, within
+each of the five places of articulation, a doubling of both the
+voiceless and the voiced stop, yielding the four-way column
+structure of the fivefold matrix examined above: voiceless
+unaspirated, voiceless aspirated, voiced unaspirated, and voiced
+aspirated.
+</p>
+<p>
+Aspiration in the Sanskrit phonetic sense refers to an audible
+period of breath, a burst of turbulent airflow, accompanying the
+release of the stop closure, distinct from the aspirate consonant
+h itself, which is a separate, independent sound in its own right
+occupying its own position within the sound inventory, appearing
+as it does at both the beginning of sutra five and the whole of
+sutra fourteen in the Maheshvara Sutras. The mahaprana stops, kha,
+gha, cha, jha, and their counterparts across the other three
+places of articulation, are analyzed by the tradition as involving
+this same glottal or breath-related gesture superimposed upon the
+basic place-of-articulation closure that defines each stop.
+</p>
+<p>
+The aspiration parameter, like the voicing parameter examined in
+the preceding section, plays a substantial role in Sanskrit's
+internal morphophonemic patterning, most notably in the
+dissimilatory pattern, recognized within the indigenous
+grammatical tradition independently of and prior to its formal
+description in comparative philological literature under the name
+Grassmann's Law, whereby a root containing two aspirated
+consonants systematically loses the aspiration of the first when a
+further aspirated element is added in derivation, a pattern that
+depends on the grammar's ability to designate the aspirated stops
+as a coherent class, a capacity provided precisely by the specific
+division of the Maheshvara Sutras into sutras eight and nine for
+the voiced aspirated series and the aspirated portion of sutra
+eleven for the voiceless aspirated series.
+</p>
+
+<h2 id="s30"><span class="num">30</span>Anunasika and the Nasal Class</h2>
+<p>
+The category of nasal sounds, anunasika, occupies a distinctive
+position within Sanskrit phonology, straddling the consonantal and
+the purely resonant. As already examined in the discussion of the
+seventh Maheshvara Sutra, the five nasal consonants &#331;a,
+&#241;a, &#7751;a, na, and ma are produced with a complete oral
+closure at each of the five respective places of articulation,
+identical in this respect to the corresponding voiced unaspirated
+stops, but distinguished by the lowering of the velum, which
+permits continuous airflow through the nasal cavity throughout the
+closure, producing the characteristic nasal resonance.
+</p>
+<p>
+Beyond the five full nasal consonants, Sanskrit phonology
+additionally recognizes anusvara, a nasalization applied to a
+preceding vowel and represented in the writing system by a
+distinctive diacritic mark, and in certain phonetic contexts a
+fully nasalized vowel quality distinct from anusvara, termed
+candrabindu in its written representation. These secondary nasal
+phenomena, while not assigned independent membership within the
+fourteen Maheshvara Sutras in the manner of the five primary nasal
+consonants, are nonetheless the subject of extensive rule-governed
+treatment elsewhere in the Ashtadhyayi, particularly in the rules
+governing the specific circumstances under which a nasal consonant
+at the end of a syllable is realized as anusvara rather than as a
+full nasal consonant matching the place of articulation of what
+follows.
+</p>
+<p>
+The behavior of nasal consonants in sandhi, whereby a nasal
+assimilates in place of articulation to an immediately following
+stop consonant, ma becoming na before a dental stop, or &#331;a
+before a velar stop, and so forth across all five places,
+represents one of the most regular and exceptionless patterns in
+the entire language, and its regularity is directly attributable
+to the systematic, place-parallel structure of the fivefold
+consonant matrix examined earlier: because each place of
+articulation has exactly one corresponding nasal, the assimilation
+rule can be stated as a single general principle, "a nasal takes
+the place of articulation of a following stop," without need for
+place-specific sub-rules.
+</p>
+
+<h2 id="s31"><span class="num">31</span>The Semivowels and the Sibilants</h2>
+<p>
+Two further consonant classes, examined individually in connection
+with their specific Maheshvara Sutras above, merit consolidated
+treatment here in light of their shared intermediate articulatory
+status between the fully open vowels and the fully closed stops.
+The semivowels, ya, va, ra, and la, are produced with the
+ishat-sprishta degree of internal effort, slight contact, examined
+in the section on prayatna, and each corresponds to a specific
+vowel or vowel-adjacent sound: ya to i, va to u, ra to the
+syllabic liquid &#7771;, and la, though lacking a fully parallel
+syllabic vowel counterpart in classical Sanskrit, sharing its
+place and manner characteristics with the syllabic &#7735;
+recognized in the earliest phonetic literature.
+</p>
+<p>
+The sibilants, &#347;a, &#7779;a, and sa, are produced with the
+ishat-vivrita degree of internal effort, open approximation,
+generating the audible frication characteristic of this class, and
+are distributed across three distinct places of articulation,
+palatal, retroflex, and dental respectively, a distribution that
+itself reflects the more general Sanskrit tendency to maintain the
+same four-or-more-way place distinction across as many manner
+classes as the physical possibilities of the vocal tract allow, in
+service of the language's broader system of contrastive sound
+organization.
+</p>
+<p>
+Both classes, together with the aspirate ha, are grouped by the
+ancient phoneticians under the broader descriptive category of
+ushman sounds when considered together with the sibilants
+specifically, or more generally recognized as occupying a
+continuum of decreasing constriction between the stops and the
+vowels, a continuum that the specific ordering of the Maheshvara
+Sutras, opening the consonant sequence with ha and the semivowels
+in sutra five before proceeding to the more constricted stop
+consonants in the later sutras, and returning to the sibilants
+only in sutra thirteen following the stops, reflects through its
+own particular logic of pratyahara-driven arrangement rather than
+through the continuum ordering directly, a point that underscores
+once again the distinction, examined at length in the section on
+the logic of the arrangement, between the pedagogical,
+articulation-continuum-based ordering of the standard alphabet and
+the grammatically-driven ordering of the fourteen sutras.
+</p>
+
+<h2 id="s32"><span class="num">32</span>Computational and Formal Significance of the System</h2>
+<p>
+Viewed from the standpoint of formal language theory and computer
+science, the combination of the fourteen Maheshvara Sutras with
+the single pratyahara-formation rule of Ashtadhyayi 1.1.71
+constitutes a genuine instance of a technique that would only be
+independently rediscovered, and formally theorized, many centuries
+later within the development of modern computational notation: the
+definition of named, addressable ranges over a fixed, linearly
+ordered alphabet.
+</p>
+<p>
+The closest structural analogue in contemporary computing is the
+character class or character range construct found in regular
+expression notation and in many programming languages, where a
+fixed alphabet, the set of possible characters, is arranged in a
+defined order, and a range such as the notation commonly written a
+through z is used to designate every character falling between two
+specified endpoints in that fixed order, without the need to
+enumerate each member individually. The Sanskrit pratyahara,
+formed by specifying a starting sound and a terminal it marker
+within the fixed order of the fourteen sutras, performs exactly
+this function: it designates a range within an ordered alphabet
+through reference to its two endpoints alone.
+</p>
+<p>
+The analogy extends further than surface resemblance. In both
+systems, the power of the technique depends critically on the
+deliberate, purposeful ordering of the underlying alphabet: a
+character range in a regular expression is useful only because the
+alphabet has been fixed in a conventional order, typically
+alphabetical, that groups together characters likely to be
+referenced as a contiguous set, digits, lowercase letters,
+uppercase letters, and so forth. Similarly, the pratyahara system
+is useful only because the fourteen sutras impose a specific,
+non-alphabetical, functionally motivated order on the Sanskrit
+sound inventory, an order engineered, as demonstrated at length in
+the section on the logic of the arrangement, specifically to
+maximize the number of grammatically relevant sound classes
+expressible as a contiguous range.
+</p>
+<p>
+A further point of formal interest concerns the it markers
+themselves, which function as pure indices carrying no phonetic
+content of their own, existing solely to serve as addressable
+endpoints within the sequence. This is structurally analogous to
+the use of sentinel or delimiter values in formal string and array
+processing, symbols introduced into a data structure not because
+they represent meaningful data but because they mark boundaries
+that a processing algorithm, in this case the grammarian applying
+the rule of 1.1.71, needs to be able to locate reliably.
+</p>
+<p>
+It should be stated clearly that recognizing these structural
+parallels between Panini's fourteenth century-BCE, or thereabouts,
+phonological notation and twentieth-century computer science
+formalism is not a claim of direct historical influence, no such
+influence pathway is documented, but rather an observation about
+convergent formal solutions to a genuinely recurring problem: the
+compact designation of subsets of an ordered domain. That two
+intellectual traditions separated by more than two millennia and
+originating in entirely different practical contexts, the correct
+transmission of Vedic recitation on one hand and the specification
+of computational procedures on the other, converged on
+structurally similar solutions is itself a datum of some interest
+for the general study of formal notation and its history,
+regardless of any question of direct historical transmission.
+</p>
+
+<h2 id="s33"><span class="num">33</span>Comparative Notes: Panini and Other Grammatical Traditions</h2>
+<p>
+Placing Panini's phonological notation in comparative context with
+other ancient grammatical traditions clarifies both its specific
+originality and the broader landscape of ancient linguistic
+thought within which it arose. The Greek grammatical tradition,
+associated with figures such as Dionysius Thrax and, in the domain
+of phonetic and rhetorical analysis, with earlier work traceable
+to the Sophists and to Plato's dialogue Cratylus, developed a
+sophisticated vocabulary for classifying Greek sounds by manner of
+articulation, distinguishing vowels, semivowels, and mutes, and
+within the mutes, further distinguishing smooth, rough, and medial
+articulations corresponding roughly to the voiceless unaspirated,
+voiceless aspirated, and voiced categories recognized
+independently within the Sanskrit tradition.
+</p>
+<p>
+Despite this partial convergence in the underlying phonetic
+categories recognized, no comparable formal compression device
+analogous to the pratyahara system is attested within the Greek
+grammatical tradition, nor within the Latin grammatical tradition
+that inherited and extended Greek grammatical concepts through
+figures such as Donatus and Priscian. Both traditions remained,
+throughout antiquity, primarily descriptive and pedagogical in
+orientation, cataloguing the sounds and forms of the language for
+the purposes of correct usage and literary composition, rather
+than developing the kind of generative, rule-based formal system
+that characterizes Panini's Ashtadhyayi as a whole and that the
+Maheshvara Sutras serve specifically to support.
+</p>
+<p>
+Within the broader ancient Indian context itself, the Pratishakhya
+literature attached to the various Vedic recensions, predating
+Panini and providing much of the raw phonetic observation upon
+which his system draws, likewise did not develop a formal
+compression device of the pratyahara type, remaining oriented
+toward the specific phonetic requirements of correctly reciting a
+particular fixed text rather than toward the general, productive
+description of the language's grammar as a whole. The pratyahara
+system, and the fourteen Maheshvara Sutras that make it possible,
+thus represent an innovation specifically attributable to the
+generative, rule-based ambitions of Panini's grammatical project,
+distinguishing it even from its own immediate phonetic-descriptive
+antecedents within the Indian tradition.
+</p>
+<p>
+Modern linguistic scholarship, beginning substantially in the
+nineteenth century with European Sanskritists' encounter with the
+Ashtadhyayi and continuing through the twentieth century's
+development of formal and generative approaches to grammar, has
+repeatedly noted the structural resemblance between Panini's
+methodology, rule-based, maximally general, employing explicit
+ordering and blocking principles among rules, and the methodology
+of modern formal and generative linguistics, a resemblance
+frequently invoked in discussions of the history of formal
+grammatical description, though again without implying any direct
+historical transmission between the two traditions across the
+intervening centuries.
+</p>
+
+<h2 id="s34"><span class="num">34</span>Legacy and Later Reception</h2>
+<p>
+The Maheshvara Sutras did not remain static or unexamined after
+their initial formulation but became themselves an object of
+extensive commentarial attention within the subsequent grammatical
+tradition. Katyayana's Varttikas, composed within a few centuries
+of Panini and preserved as an integral layer of commentary
+throughout the subsequent tradition, engage directly with
+questions of the precise scope and function of individual
+pratyaharas. Patanjali's Mahabhashya, the great commentary that
+itself became a foundational text of the tradition in its own
+right, devotes substantial early discussion to the theoretical
+status of the fourteen sutras, including extended reflection on
+the traditional account of their revelation and its relationship
+to the purely linguistic-technical account of their function.
+</p>
+<p>
+Later grammatical works within the Paninian tradition, most
+notably the Siddhanta Kaumudi of Bhattoji Dikshita, composed in
+the medieval period and still widely used as a pedagogical
+restructuring of the Ashtadhyayi's material, retain the fourteen
+sutras in their original form and position while reorganizing the
+presentation of the surrounding grammatical rules for improved
+pedagogical accessibility, a testament to the sutras' status as a
+fixed, foundational element of the tradition not subject to the
+kind of reorganization applied to other portions of the grammar.
+</p>
+<p>
+Beyond the specifically grammatical tradition, the fourteen sutras
+and the broader phonetic-articulatory analysis they presuppose
+exercised significant influence on subsequent developments within
+Indian aesthetic and performance theory, including the treatment
+of vocal production within musicological literature and within the
+dramaturgical tradition associated with Bharata's Natyashastra,
+where the classification of sounds by place and manner of
+articulation informed theoretical discussion of vocal delivery,
+articulation clarity, and the relationship between phonetic
+production and aesthetic effect in dramatic recitation and song.
+</p>
+<p>
+Within contemporary scholarship, the Maheshvara Sutras and the
+pratyahara system continue to attract sustained attention across
+several distinct fields: within Indology and Sanskrit studies
+proper, as an object of philological and historical-linguistic
+investigation in its own right; within the history and philosophy
+of linguistics, as a case study in the early development of formal
+grammatical method; and within computational linguistics and
+computer science, where the structural parallels to modern formal
+notation, examined in the preceding section, have prompted
+repeated scholarly comparison and have occasionally informed the
+design of computational systems for Sanskrit processing that
+explicitly model their handling of sound classes on the pratyahara
+mechanism itself.
+</p>
+
+<h2 id="s35"><span class="num">35</span>Concluding Synthesis</h2>
+<p>
+The fourteen Maheshvara Sutras, examined across the preceding
+sections in their individual content, their collective organizing
+logic, their operative function within the pratyahara system, and
+their relationship to the broader varna concept and the
+articulatory analysis of sthana and prayatna, present a unified
+picture of a phonological notation engineered with an
+extraordinary and historically rare degree of formal foresight.
+Every design choice examined, the specific division points between
+sutras, the specific choice and occasional deliberate repetition
+of it markers, the departure from the pedagogically transparent
+place-based ordering in favor of a grammatically optimized
+manner-based ordering, can be shown on close analysis to serve the
+overriding purpose of maximizing the number of grammatically
+relevant sound classes expressible through the compact,
+two-endpoint pratyahara notation.
+</p>
+<p>
+This purpose-built character of the fourteen sutras distinguishes
+them sharply from a merely descriptive alphabet or sound
+inventory, however carefully such an inventory might otherwise be
+constructed, and situates them instead within the specific
+category of formal notational devices engineered to support a
+generative rule system, a category whose other historically
+significant members mostly postdate Panini by more than two
+thousand years. The system's continued, unbroken use throughout
+the entire subsequent history of Sanskrit grammatical scholarship,
+from Katyayana and Patanjali through Bhattoji Dikshita to
+contemporary computational Sanskrit processing, testifies to its
+enduring structural soundness: a notation engineered for one
+specific grammatical project in antiquity has proven robust enough
+to serve every subsequent stage of that tradition's development
+without requiring fundamental revision.
+</p>
+<p>
+The varna concept examined in connection with the sutras, together
+with the parallel analytical apparatus of sthana and prayatna,
+place and effort of articulation, further demonstrates that the
+fourteen sutras did not arise in isolation but as the culminating
+formal expression of a much broader and independently
+well-developed tradition of empirical phonetic observation, one
+whose attention to the physical mechanics of speech production
+achieved a level of descriptive precision fully commensurate with,
+and in certain specific respects anticipating, the achievements of
+modern articulatory phonetics developed many centuries later
+through entirely independent methods and in an entirely different
+intellectual context. Taken as a whole, the Maheshvara Sutras and
+the analytical apparatus surrounding them constitute one of the
+genuinely original contributions of the ancient Indian
+intellectual tradition to the general human understanding of
+language, standing as a rigorously engineered solution to the
+problem of compact, precise, and unambiguous reference to
+structured classes of linguistic sound.
+</p>
+
+<footer>A study of the fourteen Maheshvara Sutras, the pratyahara system, and the phonological foundations of the Ashtadhyayi.</footer>
+</div>
 </body>
 </html>
+
